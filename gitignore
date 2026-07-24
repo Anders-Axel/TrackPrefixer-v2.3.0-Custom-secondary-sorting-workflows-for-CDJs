@@ -1,0 +1,26 @@
+# macOS / Windows
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+*.swp
+*~
+
+# Generated release packages
+*.zip
+
+# Local work folders
+tp-*-work/
+tp-*-check/
+tp-release-rename/
+tp-final-work/
+
+# Private project handoff
+TrackPrefixer-*-AI-Handoff-Prompt.md
+AI_HANDOFF_PROMPT.md
+
+# Node tooling, if used locally
+node_modules/
