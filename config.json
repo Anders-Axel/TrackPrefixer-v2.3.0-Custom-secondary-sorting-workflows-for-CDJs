@@ -1,0 +1,144 @@
+{
+  "id": "andersaxel.trackprefixer",
+  "author": {
+    "name": "AndersAxel",
+    "discordUsername": "AndersAxel"
+  },
+  "actions": [
+    {
+      "id": "configure.trackprefixer",
+      "name": "Configure TrackPrefixer",
+      "description": "Opens a section-based menu with a Lexicon-safe Preset Manager for shared TrackPrefixer settings.",
+      "config": {
+        "permissions": {
+          "storage": true,
+          "files": {
+            "write": true,
+            "list": true
+          }
+        },
+        "settings": {
+          "Preset Name": "New preset"
+        }
+      }
+    },
+    {
+      "id": "about.trackprefixer",
+      "name": "About TrackPrefixer",
+      "description": "Shows version, authorship, AI-assistance disclosure, license and project status.",
+      "config": {
+        "permissions": {}
+      }
+    },
+    {
+      "id": "number.selected.from.start",
+      "name": "Number selected tracks",
+      "description": "Numbers selected tracks immediately using the saved TrackPrefixer settings.",
+      "config": {
+        "permissions": {
+          "track": {
+            "read": [
+              "all",
+              "selected"
+            ],
+            "modify": [
+              "selected"
+            ],
+            "modifyFields": [
+              "title",
+              "grouping",
+              "comment"
+            ]
+          },
+          "storage": true,
+          "files": {
+            "list": true,
+            "write": true
+          }
+        }
+      }
+    },
+    {
+      "id": "continue.selected.numbering",
+      "name": "Continue selected numbering",
+      "description": "Continues from the highest matching prefix in the main library, preserving that prefix width while using the saved sorting and prefix-handling settings.",
+      "config": {
+        "permissions": {
+          "track": {
+            "read": [
+              "all",
+              "selected"
+            ],
+            "modify": [
+              "selected"
+            ],
+            "modifyFields": [
+              "title",
+              "grouping",
+              "comment"
+            ]
+          },
+          "storage": true,
+          "files": {
+            "list": true,
+            "write": true
+          }
+        }
+      }
+    },
+    {
+      "id": "remove.selected.prefixes",
+      "name": "Remove selected prefixes",
+      "description": "Removes matching TrackPrefixer prefixes from the configured target field.",
+      "config": {
+        "permissions": {
+          "track": {
+            "read": [
+              "selected"
+            ],
+            "modify": [
+              "selected"
+            ],
+            "modifyFields": [
+              "title",
+              "grouping",
+              "comment"
+            ]
+          },
+          "storage": true,
+          "files": {
+            "list": true,
+            "write": true
+          }
+        }
+      }
+    },
+    {
+      "id": "reset.saved.number",
+      "name": "Reset saved number",
+      "description": "Resets the saved last number to zero without changing any tracks.",
+      "config": {
+        "permissions": {
+          "storage": true,
+          "files": {
+            "write": true
+          }
+        }
+      }
+    },
+    {
+      "id": "restore.default.settings",
+      "name": "Restore default settings",
+      "description": "Restores all persistent TrackPrefixer settings to their safe defaults.",
+      "config": {
+        "permissions": {
+          "storage": true,
+          "files": {
+            "write": true,
+            "list": true
+          }
+        }
+      }
+    }
+  ]
+}
